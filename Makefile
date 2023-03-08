@@ -73,7 +73,7 @@ $(FAISS_LIB_DIR):
 			git fetch --depth 1 origin $(FAISS_GIT_REV) && \
 			git checkout FETCH_HEAD && \
 			cmake -B build . $(CMAKE_FLAGS) && \
-			make -C build -j faiss
+			make -C build  faiss
 
 clean:
 	rm -rf $(EX_FAISS_CACHE_SO)
